@@ -8,7 +8,7 @@ la **herramienta**.
 | # | Decisión | Python (referencia) | .NET (referencia) | **Laravel + React (reto)** | Por qué se conserva el principio |
 |---|---|---|---|---|---|
 | D-01 | Lenguaje | Python 3.12 | .NET | **PHP 8.3** | Stack del reto |
-| D-02 | Framework HTTP | FastAPI | ASP.NET Core | **Laravel 12** (rutas en `routes/api.php`, controladores como adaptador de entrada) | Contrato de `api-contract.md` sin cambios |
+| D-02 | Framework HTTP | FastAPI | ASP.NET Core | **Laravel 13** (rutas en `routes/api.php`, controladores como adaptador de entrada) | Contrato de `api-contract.md` sin cambios |
 | D-03 | Persistencia | SQLAlchemy 2 + Alembic | EF Core + migraciones | **Migraciones de Laravel** sobre **PostgreSQL 16**, esquema `library`; repositorios con el Query Builder | ADR-001: el esquema es de las migraciones |
 | D-04 | Concurrencia | Testigo de versión + `CHECK` | Igual | **Columna `version`** en `book` + `UPDATE … WHERE id = ? AND version = ?`; si afecta 0 filas → 409 `BOOK_NOT_AVAILABLE`. Última barrera: `ck_book_available_range` | ADR-002 (ver hallazgo H-01) |
 | D-05 | Fechas | `timestamptz`, puerto `Clock` | Igual | `timestamptz`, puerto `App\Application\Ports\Clock`; en pruebas un `FixedClock` | Probar vencimientos sin esperar 14 días |
