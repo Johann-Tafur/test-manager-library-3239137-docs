@@ -3,7 +3,7 @@
 Mismas tareas de [`../spec-python/tasks.md`](../spec-python/tasks.md). La evidencia se traduce al stack del reto.
 Una tarea es **hecha** solo cuando su evidencia existe y se puede ejecutar (artículo XII).
 
-**Cómo correr la evidencia** (repo `api`): `php artisan test` → 29 pruebas en verde.
+**Cómo correr la evidencia** (repo `api`): `php artisan test` → 34 pruebas en verde.
 
 | # | Tarea | Evidencia en Laravel/React | Estado |
 |---|---|---|---|
@@ -12,7 +12,7 @@ Una tarea es **hecha** solo cuando su evidencia existe y se puede ejecutar (art�
 | T-03 | Objetos de valor `Isbn`, `Quantity`, `DateRange` | `tests/Unit/Domain/ValueObjectsTest.php` | **hecha** |
 | T-04 | `Book` (`withdraw`, `restock`, baja lógica) | `tests/Unit/Domain/BookTest.php`: nunca < 0, nunca > total | **hecha** |
 | T-05 | `Loan` (estado calculado, 14 días, máx. 3) | `tests/Unit/Domain/LoanTest.php` con fecha fija como reloj falso: `open`, `overdue`, `closed` | **hecha** |
-| T-06 | `Member` y `User` | — | pendiente |
+| T-06 | `Member` y `User` | `tests/Unit/Domain/MemberAndUserTest.php`: `"Ana "` queda `ana`; rol `admin` por API rechazado | **hecha** |
 | T-07 | Autenticación con fakes | — | pendiente |
 | T-08 | Libros con fakes | — | pendiente |
 | T-09 | Prestar con fakes | Reglas de dominio cubiertas en T-05; falta el caso de uso | pendiente |
